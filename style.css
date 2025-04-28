@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #4e0009; 
+    color: #f0f0f0; 
+    padding: 20px;
+}
+  
+  /* Cabeçalho */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #750c27;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+  
+header h1 {
+    font-size: 2.5rem;
+    color: #ffb3c6; /* Um rosinha claro pra quebrar o peso */
+    margin-bottom: 10px;
+}
+  
+header p {
+    font-size: 1.2rem;
+    color: #ffe0e6;
+    margin-bottom: 20px;
+}
+  
+#toggle-theme {
+    padding: 10px 20px;
+    background-color: #9b1745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+  
+#toggle-theme:hover {
+    background-color: #750c27;
+}
+  
+  /* Principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+  
+.info {
+    background-color: #750c27;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+  
+.info h2 {
+    color: #ffb3c6;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #9b1745;
+    padding-bottom: 5px;
+}
+  
+.info p, .info li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+  
+ul {
+    list-style: inside disc;
+}
+  
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+  
+button, a {
+    transition: all 0.3s ease;
+}
+  
+button:hover, a:hover {
+    transform: scale(1.05);
+}
+  
+ 
+  
+  
