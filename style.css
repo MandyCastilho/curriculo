@@ -1,5 +1,206 @@
 @charset "UTF-8";
 
+:root {
+  --cor-primaria: #9b1745; /* Rosa vibrante */
+  --cor-secundaria: #750c27; /* Tom mais escuro de rosa */
+  --cor-terciaria: #4e0009; /* Tom mais escuro de vermelho */
+  --cor-fundo: #f5f5f5; /* Cor de fundo suave */
+  --cor-texto: #333; /* Cor de texto principal */
+  --cor-acento: #ffffff; /* Branco para contraste */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Helvetica', sans-serif;
+  color: white;
+}
+
+h2, h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-family: 'Helvetica', sans-serif;
+  color: var(--cor-secundaria);
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-acento);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid var(--cor-acento);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .header-container h1 {
+  margin-bottom: 10px;
+}
+
+header .header-container .subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Estilo das seções */
+main {
+  padding: 40px 20px;
+}
+
+.info {
+  background: var(--cor-acento);
+  color: var(--cor-texto);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.info:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.info h2 {
+  color: var(--cor-secundaria);
+  margin-bottom: 20px;
+}
+
+.info ul {
+  list-style: none;
+}
+
+.info ul li {
+  margin: 8px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Estilo para listas (ul) */
+ul {
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding-left: 0; /* Remove o espaçamento da esquerda */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  font-size: 1rem; /* Tamanho de fonte uniforme */
+  color: var(--cor-texto); /* Cor de texto principal */
+  line-height: 1.8; /* Aumenta o espaçamento entre as linhas para maior legibilidade */
+  margin-bottom: 12px; /* Espaçamento entre os itens */
+  padding-left: 20px; /* Adiciona um pequeno recuo para os itens */
+  position: relative; /* Permite usar posicionamento para criar um indicador */
+}
+
+/* Indicador personalizado para os itens da lista */
+ul li::before {
+  content: ''; /* Cria um elemento vazio */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--cor-primaria); /* Usando a cor primária para o círculo */
+  transition: background-color 0.3s ease; /* Suaviza a transição de cor */
+}
+
+/* Efeito de hover nos itens da lista */
+ul li:hover {
+  color: var(--cor-secundaria); /* Altera a cor do texto ao passar o mouse */
+  transform: translateX(5px); /* Move ligeiramente para a direita para um efeito dinâmico */
+  transition: transform 0.3s ease, color 0.3s ease; /* Suaviza a transformação e a mudança de cor */
+}
+
+/* Efeito de hover no indicador */
+ul li:hover::before {
+  background-color: var(--cor-secundaria); /* Muda a cor do círculo ao passar o mouse */
+}
+
+/* Estilo alternativo para listas em seções de destaque */
+ul.highlighted li {
+  background-color: var(--cor-acento); /* Cor de fundo para itens destacados */
+  color: var(--cor-secundaria); /* Cor do texto de destaque */
+  border-radius: 8px;
+  padding: 15px; /* Aumenta o espaçamento interno para um visual mais destacado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul.highlighted li:hover {
+  background-color: var(--cor-primaria); /* Muda para a cor primária ao passar o mouse */
+  color: var(--cor-acento); /* Cor do texto ao passar o mouse */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.info a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info a:hover {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+
+/* Links */
+a {
+  color: var(--cor-primaria);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-acento);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  color: var(--cor-acento);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
+
 
  
 
