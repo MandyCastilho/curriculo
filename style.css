@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* Fonte moderna */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
@@ -21,23 +20,26 @@
   font-family: 'Inter', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor-secundaria);
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* borda para "encaixar" no fundo */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cor-primaria); 
+}
+
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   line-height: 1.6;
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Suporte para modo claro/escuro */
-body.light-mode {
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-}
-
-body.dark-mode {
-  background-color: #1a1a1a;
-  color: #eee;
 }
 
 h1 {
@@ -56,7 +58,13 @@ h2, h3 {
   transition: color 0.3s ease;
 }
 
+#ctt{
+  text-align: center;
+  font-size: 3em;
+}
+
 .palavra {
+  text-align: justify;
   font-size: 1.1rem;
   line-height: 1.9;
   color: var(--cor-texto);
