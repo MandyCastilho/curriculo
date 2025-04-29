@@ -190,20 +190,163 @@ ul li:hover::before {
   background-color: var(--cor-secundaria);
 }
 
+/* Estilo para a seção de Formação */
+#formacao ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  border-left: 4px solid var(--cor-primaria);
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#formacao ul li {
+  background-color: #f8f8f8;
+  padding: 12px 18px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#formacao ul li strong {
+  display: inline-block;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+#formacao ul li:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--cor-secundaria);
+  background-color: #fff6f8;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  cursor: default;
+}
+
+/* Estilo para a seção de habilidades */
+#habilidades ul li {
+  background-color: #ffffff;
+  border: 2px dashed var(--cor-primaria);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  color: var(--cor-texto);
+}
+
+#habilidades ul li::before {
+  content: '👩‍💻';
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+  position: relative;
+  margin-right: 10px;
+  top: 2px;
+}
+
+#habilidades ul li:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--cor-secundaria);
+  background-color: #fff6f8;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  cursor: default;
+}
+
+
+/* Estilo para a seção de ferramentas */
+#ferramentas ul li {
+  background-color: #ffffff;
+  border-left: 4px solid var(--cor-primaria);
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  color: var(--cor-texto);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ferramentas ul li::before {
+  content: '🛠️';
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+  position: absolute;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+#ferramentas ul li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--cor-secundaria);
+  background-color: #fff6f8;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  cursor: default;
+}
+
+/* Estilo para a seção de soft-skills */
+#soft-skills ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#soft-skills ul li {
+  background-color: #ffffff;
+  border-left: 4px solid var(--cor-primaria);
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  color: var(--cor-texto);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#soft-skills ul li::before {
+  content: '🌟';
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+#soft-skills ul li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--cor-secundaria);
+  background-color: #fff6f8;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  cursor: default;
+}
+
+
 /* Estilo para a seção de certificações */
 #certificacoes ul li {
   background-color: #ffffff;
   border-left: 4px solid var(--cor-primaria);
-  padding: 12px 20px;
+  padding: 15px 20px;
   padding-left: 40px; /* Espaço para o ícone */
   border-radius: 8px;
-  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 1.05rem;
   color: var(--cor-texto);
   display: flex;
   align-items: center;
   gap: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
   cursor: pointer;
 }
 
@@ -216,10 +359,21 @@ ul li:hover::before {
 
 #certificacoes ul li::before {
   content: '🎓';
+  color: var(--cor-primaria);
   position: absolute;
   top: 2px;
-  font-size: 1.2rem;
-  transform: translateY(-50%);
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+#certificacoes ul li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--cor-secundaria);
+  background-color: #fff6f8;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  cursor: default;
 }
 
 #certificacoes ul li span {
@@ -292,7 +446,6 @@ ul li:hover::before {
   font-size: 1.2rem;
   position: relative;
   top: 2px;
-  
 }
 
 #diferenciais ul li:hover {
