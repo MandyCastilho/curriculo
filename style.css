@@ -1,12 +1,15 @@
 @charset "UTF-8";
 
+/* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root {
-  --cor-primaria: #9b1745; /* Rosa vibrante */
-  --cor-secundaria: #750c27; /* Tom mais escuro de rosa */
-  --cor-terciaria: #4e0009; /* Tom mais escuro de vermelho */
-  --cor-fundo: #f5f5f5; /* Cor de fundo suave */
-  --cor-texto: #333; /* Cor de texto principal */
-  --cor-acento: #ffffff; /* Branco para contraste */
+  --cor-primaria: #9b1745;
+  --cor-secundaria: #750c27;
+  --cor-terciaria: #4e0009;
+  --cor-fundo: #f5f5f5;
+  --cor-texto: #333;
+  --cor-acento: #ffffff;
 }
 
 *,
@@ -15,7 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -24,6 +27,17 @@ body {
   line-height: 1.6;
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Suporte para modo claro/escuro */
+body.light-mode {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #eee;
 }
 
 h1 {
@@ -39,6 +53,27 @@ h2, h3 {
   margin-bottom: 10px;
   font-family: 'Helvetica', sans-serif;
   color: var(--cor-secundaria);
+  transition: color 0.3s ease;
+}
+
+.palavra {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--cor-texto);
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 4px solid var(--cor-primaria);
+  background: linear-gradient(90deg, #ffffffcc, #fff8f8cc);
+  border-radius: 6px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.palavra:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Cabeçalho */
@@ -66,13 +101,27 @@ main {
 }
 
 .info {
-  background: var(--cor-acento);
+  background: linear-gradient(145deg, #ffffffee, #fffafae0);
   color: var(--cor-texto);
   border-radius: 12px;
   padding: 30px;
   margin-bottom: 30px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .info:hover {
@@ -85,6 +134,12 @@ main {
   margin-bottom: 20px;
 }
 
+.info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
 .info ul {
   list-style: none;
 }
@@ -95,26 +150,26 @@ main {
   line-height: 1.5;
 }
 
-/* Estilo para listas (ul) */
+/* Listas */
 ul {
-  list-style-type: none; /* Remove os marcadores padrão */
-  padding-left: 0; /* Remove o espaçamento da esquerda */
+  list-style-type: none;
+  padding-left: 0;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
 ul li {
-  font-size: 1rem; /* Tamanho de fonte uniforme */
-  color: var(--cor-texto); /* Cor de texto principal */
-  line-height: 1.8; /* Aumenta o espaçamento entre as linhas para maior legibilidade */
-  margin-bottom: 12px; /* Espaçamento entre os itens */
-  padding-left: 20px; /* Adiciona um pequeno recuo para os itens */
-  position: relative; /* Permite usar posicionamento para criar um indicador */
+  font-size: 1rem;
+  color: var(--cor-texto);
+  line-height: 1.8;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Indicador personalizado para os itens da lista */
 ul li::before {
-  content: ''; /* Cria um elemento vazio */
+  content: '';
   position: absolute;
   left: 0;
   top: 50%;
@@ -122,36 +177,224 @@ ul li::before {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--cor-primaria); /* Usando a cor primária para o círculo */
-  transition: background-color 0.3s ease; /* Suaviza a transição de cor */
+  background-color: var(--cor-primaria);
+  transition: background-color 0.3s ease;
 }
 
-/* Efeito de hover nos itens da lista */
 ul li:hover {
-  color: var(--cor-secundaria); /* Altera a cor do texto ao passar o mouse */
-  transform: translateX(5px); /* Move ligeiramente para a direita para um efeito dinâmico */
-  transition: transform 0.3s ease, color 0.3s ease; /* Suaviza a transformação e a mudança de cor */
+  color: var(--cor-secundaria);
+  transform: translateX(5px);
 }
 
-/* Efeito de hover no indicador */
 ul li:hover::before {
-  background-color: var(--cor-secundaria); /* Muda a cor do círculo ao passar o mouse */
+  background-color: var(--cor-secundaria);
 }
 
-/* Estilo alternativo para listas em seções de destaque */
-ul.highlighted li {
-  background-color: var(--cor-acento); /* Cor de fundo para itens destacados */
-  color: var(--cor-secundaria); /* Cor do texto de destaque */
+/* Estilo para a seção de certificações */
+#certificacoes ul li {
+  background-color: #ffffff;
+  border-left: 4px solid var(--cor-primaria);
+  padding: 12px 20px;
+  padding-left: 40px; /* Espaço para o ícone */
   border-radius: 8px;
-  padding: 15px; /* Aumenta o espaçamento interno para um visual mais destacado */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+  color: var(--cor-texto);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
 }
 
-ul.highlighted li:hover {
-  background-color: var(--cor-primaria); /* Muda para a cor primária ao passar o mouse */
-  color: var(--cor-acento); /* Cor do texto ao passar o mouse */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+#certificacoes ul li:hover {
+  background-color: #f9f9f9;
+  transform: translateX(5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--cor-secundaria);
+}
+
+#certificacoes ul li::before {
+  content: '🎓';
+  position: absolute;
+  top: 2px;
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+}
+
+#certificacoes ul li span {
+  color: var(--cor-secundaria);
+  font-weight: 500;
+}
+
+#certificacoes ul li:hover span {
+  color: var(--cor-primaria);
+}
+
+/* Estilo personalizado para a lista de projetos */
+#projetos ul li::before {
+  content: '💻';
+  font-size: 1.2rem;
+  position: relative;
+}
+
+#projetos ul li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--cor-secundaria);
+  background: linear-gradient(135deg, #fff0f5, #ffe6eb);
+}
+
+#projetos ul li strong {
+  color: var(--cor-primaria);
+  font-weight: 700;
+  padding-left: 15px;
+}
+
+#projetos ul li a {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+#projetos ul li a:hover {
+  color: var(--cor-terciaria);
+  text-decoration: underline;
+}
+
+/* Estilo personalizado para a lista de diferenciais */
+#diferenciais ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: grid;
+  gap: 15px;
+}
+
+#diferenciais ul li {
+  background-color: #ffffff;
+  border-left: 4px solid var(--cor-primaria);
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  color: var(--cor-texto);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#diferenciais ul li::before {
+  content: '✔️';
+  color: var(--cor-primaria);
+  margin-right: 10px;
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+  
+}
+
+#diferenciais ul li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--cor-secundaria);
+  background-color: #fff6f8;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  cursor: default;
+}
+
+/* Estilo para a seção de contato */
+#contato ul li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 5px solid var(--cor-primaria);
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--cor-texto);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#contato ul li:hover {
+  border-left-color: var(--cor-secundaria);
+  background-color: #fff3f6;
+  transform: translateX(4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo mais limpo e elegante para a seção de contato */
+#contato ul li {
+  padding: 15px 10px;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: background-color 0.2s ease;
+}
+
+#contato ul li strong {
+  color: var(--cor-secundaria);
+  font-weight: bold;
+}
+
+#contato ul li a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
+
+#contato ul li::before {
+  content: none !important; /* Removendo qualquer conteúdo no antes da li */
+}
+
+#contato ul li a:hover {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+
+/* Botão do WhatsApp mais discreto e elegante */
+.whatsapp-btn {
+  background-color: transparent;
+  color: #25d366;
+  font-weight: bold;
+  border: 2px solid #25d366;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  max-width: max-content;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #25d366;
+  color: #fff !important;
+}
+
+/* Botão de download em PDF mais suave */
+.btn-pdf {
+  background-color: transparent;
+  border: 2px solid var(--cor-primaria);
+  color: var(--cor-primaria);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+  max-width: max-content;
+}
+
+.btn-pdf:hover {
+  background-color: var(--cor-primaria);
+  color: #fff !important;
 }
 
 .info a {
@@ -165,7 +408,7 @@ ul.highlighted li:hover {
   text-decoration: underline;
 }
 
-/* Links */
+/* Links gerais */
 a {
   color: var(--cor-primaria);
   transition: color 0.3s ease;
@@ -186,19 +429,17 @@ footer {
 }
 
 footer p {
-  font-size: 1rem;
-}
-
-footer a {
+  font-size: 1.2rem;
   color: var(--cor-acento);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-footer a:hover {
-  color: var(--cor-primaria);
-  text-decoration: underline;
-}
+
+
+
+
+
 
 
 
