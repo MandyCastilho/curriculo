@@ -602,6 +602,81 @@ footer p {
   transition: color 0.3s ease;
 }
 
+/* Responsividade para tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+
+  .info {
+    padding: 20px;
+  }
+
+  .palavra {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  #ctt {
+    font-size: 2.2em;
+  }
+}
+
+/* Responsividade para celulares (<= 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 30px 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2, h3 {
+    font-size: 1.3rem;
+  }
+
+  .palavra {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .info {
+    padding: 15px;
+  }
+
+  #ctt {
+    font-size: 1.8em;
+  }
+
+  ul li,
+  #formacao ul li,
+  #habilidades ul li,
+  #ferramentas ul li,
+  #soft-skills ul li,
+  #certificacoes ul li {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  #formacao ul,
+  #soft-skills ul,
+  #diferenciais ul {
+    gap: 10px;
+  }
+}
 
 
 
