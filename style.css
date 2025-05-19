@@ -20,42 +20,62 @@
   font-family: 'Inter', sans-serif;
 }
 
+
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--cor-secundaria);
   border-radius: 10px;
-  border: 2px solid #f0f0f0; /* borda para "encaixar" no fundo */
+  border: 2px solid var(--cor-fundo);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--cor-primaria); 
+  background: var(--cor-primaria);
 }
 
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
-  line-height: 1.6;
   font-size: 1rem;
+  line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
+  font-family: 'Helvetica', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  font-family: 'Helvetica', sans-serif;
   color: white;
 }
 
-h2, h3 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 10px;
-  font-family: 'Helvetica', sans-serif;
+ h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   color: var(--cor-secundaria);
+  margin-bottom: 15px;
   transition: color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-acento);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid var(--cor-acento);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .header-container h1 {
+  margin-bottom: 10px;
+}
+
+header .header-container .subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 #ctt{
@@ -84,24 +104,6 @@ h2, h3 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Cabeçalho */
-header {
-  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
-  color: var(--cor-acento);
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 2px solid var(--cor-acento);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header .header-container h1 {
-  margin-bottom: 10px;
-}
-
-header .header-container .subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-}
 
 /* Estilo das seções */
 main {
@@ -121,6 +123,16 @@ main {
   animation: fadeUp 0.8s ease forwards;
 }
 
+.info ul {
+  list-style: none;
+}
+
+.info ul li {
+  margin: 8px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -132,31 +144,7 @@ main {
   }
 }
 
-.info:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-}
 
-.info h2 {
-  color: var(--cor-secundaria);
-  margin-bottom: 20px;
-}
-
-.info p {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 10px;
-}
-
-.info ul {
-  list-style: none;
-}
-
-.info ul li {
-  margin: 8px 0;
-  font-size: 1rem;
-  line-height: 1.5;
-}
 
 /* Listas */
 ul {
@@ -546,24 +534,6 @@ ul li:hover::before {
   color: #fff !important;
 }
 
-/* Botão de download em PDF mais suave */
-.btn-pdf {
-  background-color: transparent;
-  border: 2px solid var(--cor-primaria);
-  color: var(--cor-primaria);
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  display: inline-block;
-  transition: all 0.3s ease;
-  max-width: max-content;
-}
-
-.btn-pdf:hover {
-  background-color: var(--cor-primaria);
-  color: #fff !important;
-}
-
 .info a {
   color: var(--cor-primaria);
   text-decoration: none;
@@ -600,82 +570,6 @@ footer p {
   color: var(--cor-acento);
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-/* Responsividade para tablets (<= 1024px) */
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2, h3 {
-    font-size: 1.5rem;
-  }
-
-  main {
-    padding: 30px 15px;
-  }
-
-  .info {
-    padding: 20px;
-  }
-
-  .palavra {
-    font-size: 1rem;
-    padding: 15px;
-  }
-
-  #ctt {
-    font-size: 2.2em;
-  }
-}
-
-/* Responsividade para celulares (<= 768px) */
-@media (max-width: 768px) {
-  header {
-    padding: 30px 10px;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2, h3 {
-    font-size: 1.3rem;
-  }
-
-  .palavra {
-    font-size: 0.95rem;
-    padding: 10px;
-  }
-
-  main {
-    padding: 20px 10px;
-  }
-
-  .info {
-    padding: 15px;
-  }
-
-  #ctt {
-    font-size: 1.8em;
-  }
-
-  ul li,
-  #formacao ul li,
-  #habilidades ul li,
-  #ferramentas ul li,
-  #soft-skills ul li,
-  #certificacoes ul li {
-    font-size: 0.95rem;
-    padding: 12px;
-  }
-
-  #formacao ul,
-  #soft-skills ul,
-  #diferenciais ul {
-    gap: 10px;
-  }
 }
 
 
