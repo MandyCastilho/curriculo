@@ -164,14 +164,11 @@ ul li:hover::before {
 
 /* Estilo para a seção de Formação */
 #formacao ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-  border-left: 4px solid var(--cor-primaria);
+   border-left: 4px solid var(--cor-primaria);
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 #formacao ul li {
@@ -186,20 +183,11 @@ ul li:hover::before {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#formacao ul li strong {
-  display: inline-block;
-  color: var(--cor-primaria);
-  font-weight: 600;
-  margin-right: 6px;
-}
-
 #formacao ul li:hover {
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-  border-left-color: var(--cor-secundaria);
   background-color: #fff6f8;
   color: var(--cor-secundaria);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
   font-weight: 500;
-  cursor: default;
 }
 
 /* Estilo para a seção de habilidades */
@@ -265,9 +253,6 @@ ul li:hover::before {
 
 /* Estilo para a seção de soft-skills */
 #soft-skills ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -303,7 +288,6 @@ ul li:hover::before {
   font-weight: 500;
   cursor: default;
 }
-
 
 /* Estilo para a seção de certificações */
 #certificacoes ul li {
