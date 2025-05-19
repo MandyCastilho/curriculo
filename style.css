@@ -20,43 +20,58 @@
   font-family: 'Inter', sans-serif;
 }
 
-
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--cor-secundaria);
   border-radius: 10px;
-  border: 2px solid var(--cor-fundo);
+  border: 2px solid #f0f0f0; /* borda para "encaixar" no fundo */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--cor-primaria);
+  background: var(--cor-primaria); 
 }
 
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
-  font-size: 1rem;
   line-height: 1.6;
+  font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
-  font-family: 'Helvetica', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
+  font-family: 'Helvetica', sans-serif;
   color: white;
 }
 
- h2 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  color: var(--cor-secundaria);
-  margin-bottom: 15px;
-  transition: color 0.3s ease;
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: 'Helvetica', sans-serif;
   margin-bottom: 20px;
+  color: var(--cor-secundaria);
+  transition: color 0.3s ease;
+}
+
+.palavra {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--cor-texto);
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 4px solid var(--cor-primaria);
+  background: linear-gradient(90deg, #ffffffcc, #fff8f8cc);
+  border-radius: 6px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Cabeçalho */
@@ -78,33 +93,6 @@ header .header-container .subtitle {
   font-weight: 300;
 }
 
-#ctt{
-  text-align: center;
-  font-size: 3em;
-}
-
-.palavra {
-  text-align: justify;
-  font-size: 1.1rem;
-  line-height: 1.9;
-  color: var(--cor-texto);
-  margin-bottom: 20px;
-  position: relative;
-  padding-left: 20px;
-  border-left: 4px solid var(--cor-primaria);
-  background: linear-gradient(90deg, #ffffffcc, #fff8f8cc);
-  border-radius: 6px;
-  padding: 15px 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.palavra:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-
 /* Estilo das seções */
 main {
   padding: 40px 20px;
@@ -123,16 +111,6 @@ main {
   animation: fadeUp 0.8s ease forwards;
 }
 
-.info ul {
-  list-style: none;
-}
-
-.info ul li {
-  margin: 8px 0;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -143,8 +121,6 @@ main {
     transform: translateY(0);
   }
 }
-
-
 
 /* Listas */
 ul {
@@ -555,6 +531,11 @@ a:hover {
   color: var(--cor-secundaria);
   text-decoration: underline;
 }
+#ctt{
+  text-align: center;
+  font-size: 3em;
+}
+
 
 /* Rodapé */
 footer {
@@ -570,6 +551,82 @@ footer p {
   color: var(--cor-acento);
   text-decoration: none;
   transition: color 0.3s ease;
+}
+
+/* Responsividade para tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+
+  .info {
+    padding: 20px;
+  }
+
+  .palavra {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  #ctt {
+    font-size: 2.2em;
+  }
+}
+
+/* Responsividade para celulares (<= 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 30px 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2, h3 {
+    font-size: 1.3rem;
+  }
+
+  .palavra {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .info {
+    padding: 15px;
+  }
+
+  #ctt {
+    font-size: 1.8em;
+  }
+
+  ul li,
+  #formacao ul li,
+  #habilidades ul li,
+  #ferramentas ul li,
+  #soft-skills ul li,
+  #certificacoes ul li {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  #formacao ul,
+  #soft-skills ul,
+  #diferenciais ul {
+    gap: 10px;
+  }
 }
 
 
