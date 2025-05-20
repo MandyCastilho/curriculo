@@ -613,6 +613,89 @@ footer p {
   }
 }
 
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+  color: #fff;
+}
+
+body.dark-mode .palavra {
+  background: linear-gradient(90deg, #2a2a2a, #1f1f1f);
+  color: #e6e6e6;
+  border-left-color: var(--cor-primaria);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .info {
+  background: linear-gradient(145deg, #2e2e2e, #1c1c1c);
+  color: #e0e0e0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode ul li {
+  color: #e0e0e0;
+}
+
+body.dark-mode ul li::before {
+  background-color: var(--cor-primaria);
+}
+
+body.dark-mode ul li:hover {
+  color: var(--cor-primaria);
+}
+
+body.dark-mode #formacao ul li,
+body.dark-mode #soft-skills ul li,
+body.dark-mode #ferramentas ul li,
+body.dark-mode #habilidades ul li,
+body.dark-mode #certificacoes ul li,
+body.dark-mode #diferenciais ul li,
+body.dark-mode #projetos ul li {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border-left-color: var(--cor-primaria);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode #habilidades ul li:hover,
+body.dark-mode #ferramentas ul li:hover,
+body.dark-mode #soft-skills ul li:hover,
+body.dark-mode #certificacoes ul li:hover,
+body.dark-mode #diferenciais ul li:hover,
+body.dark-mode #formacao ul li:hover {
+  background-color: #3a1e26;
+  color: #fff;
+  border-left-color: var(--cor-secundaria);
+}
+
+body.dark-mode #projetos ul li:hover {
+  background: linear-gradient(135deg, #3a1e26, #2e1219);
+  color: #fff;
+}
+
+body.dark-mode #projetos ul li a {
+  color: var(--cor-primaria);
+}
+
+body.dark-mode #projetos ul li a:hover {
+  color: var(--cor-acento);
+}
+
+/* Scrollbar escura */
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--cor-primaria);
+  border: 2px solid #1a1a1a;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--cor-secundaria);
+}
+
+
 
 
 
