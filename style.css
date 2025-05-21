@@ -698,6 +698,109 @@ body.dark-mode #contato ul li:hover {
   transform: translateX(4px);
 }
 
+/* Responsividade para tablets (768px pra baixo) */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  header {
+    padding: 30px 15px;
+  }
+
+  .info {
+    padding: 20px;
+  }
+
+  .palavra {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+
+  #formacao ul li,
+  #habilidades ul li,
+  #ferramentas ul li,
+  #soft-skills ul li,
+  #certificacoes ul li,
+  #diferenciais ul li {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+}
+
+/* Responsividade para celulares (480px pra baixo) */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  header {
+    padding: 25px 10px;
+  }
+
+  .palavra {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .info {
+    padding: 18px;
+  }
+
+  main {
+    padding: 25px 10px;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
+
+  #formacao ul li,
+  #habilidades ul li,
+  #ferramentas ul li,
+  #soft-skills ul li,
+  #certificacoes ul li,
+  #diferenciais ul li {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  #certificacoes ul li::before,
+  #ferramentas ul li::before,
+  #soft-skills ul li::before,
+  #habilidades ul li::before,
+  #diferenciais ul li::before,
+  #projetos ul li::before {
+    font-size: 1rem;
+    margin-right: 6px;
+  }
+
+  #projetos ul li strong,
+  #projetos ul li a {
+    font-size: 0.9rem;
+  }
+}
+
 
 
 
