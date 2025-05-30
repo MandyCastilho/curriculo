@@ -345,8 +345,8 @@ ul li:hover::before {
 /* Estilo personalizado para a lista de projetos */
 #projetos ul li {
   text-align: justify;
-  line-height: 1.6; /* opcional: melhora a leitura */
-  padding: 7px; /* opcional: espaçamento interno */
+  line-height: 1.6; 
+  padding: 7px; 
 }
 
 #projetos ul li::before {
