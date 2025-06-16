@@ -218,7 +218,6 @@ ul li:hover::before {
   cursor: default;
 }
 
-
 /* Estilo para a seção de ferramentas */
 #ferramentas ul li {
   background-color: #ffffff;
@@ -521,7 +520,6 @@ a:hover {
   font-size: 3em;
 }
 
-
 /* Rodapé */
 footer {
   background-color: var(--cor-secundaria);
@@ -670,7 +668,6 @@ body.dark-mode #diferenciais ul li:hover {
   transform: scale(1.02);
   box-shadow: 0 0 10px rgba(253, 96, 132, 0.2);
 }
-
 
 /* CONTATO */
 body.dark-mode #contato ul li {
