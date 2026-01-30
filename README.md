@@ -71,8 +71,7 @@ Este projeto foi criado para:
 
 ✔️ Consolidar conhecimentos em **Front-End**  
 ✔️ Aplicar **boas práticas de desenvolvimento web**  
-✔️ Criar um **currículo digital profissional**  
-✔️ Servir como **portfólio pessoal** para processos seletivos  
+✔️ Criar um **currículo digital profissional**   
 ✔️ Demonstrar domínio de **HTML, CSS e JavaScript puro**
 
 ---
