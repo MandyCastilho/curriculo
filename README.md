@@ -1,17 +1,9 @@
-# 📄 Currículo Online & Portfólio — Amanda Ramos Castilho
-
-![Frontend](https://img.shields.io/badge/Frontend-FF2FD1?style=for-the-badge&logo=react&logoColor=white)
-![Web](https://img.shields.io/badge/Web_Project-7B2CFF?style=for-the-badge&logo=google-chrome&logoColor=white)
-![UX/UI](https://img.shields.io/badge/UX%2FUI-C084FF?style=for-the-badge&logo=figma&logoColor=white)
-![Responsive](https://img.shields.io/badge/Responsive-FF6BF5?style=for-the-badge)
-![Dark Mode](https://img.shields.io/badge/Dark_Mode-05010D?style=for-the-badge&logo=moon&logoColor=C084FF)
-![Open Source](https://img.shields.io/badge/Open_Source-2DE2FF?style=for-the-badge&logo=github&logoColor=000)
-
+# 📄 Currículo Online — Amanda Ramos Castilho
 ---
 
 ## 🧾 Sobre o Projeto
 
-Projeto de **currículo online e portfólio profissional**, desenvolvido com **HTML5, CSS3 e JavaScript puro**, com foco em **design moderno**, **acessibilidade**, **responsividade** e **experiência do usuário**.
+Projeto de **currículo online**, desenvolvido com **HTML5, CSS3 e JavaScript puro**, com foco em **design moderno**, **acessibilidade**, **responsividade** e **experiência do usuário**.
 
 O site funciona como uma **vitrine digital completa**, apresentando informações profissionais, habilidades técnicas, projetos autorais, certificações e formas de contato — ideal para **recrutadores e empresas**.
 
